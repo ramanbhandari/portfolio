@@ -29,4 +29,4 @@ jobs:
         publish_branch: main
         user_name: 'GitHub Actions'
         user_email: 'actions@github.com'
-        deploy_key: ${{ secrets.ACTIONS.DEPLOY_KEY}}
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY}}
