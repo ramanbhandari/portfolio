@@ -29,7 +29,6 @@ export default function Home() {
 				justifyContent="center">
 				<Grid item paddingBottom={10} size={{ xs: 10, md: 5 }}>
 					<Grid container direction="row">
-						Test
 						<ImageContainer>
 							<img className="img-profile" src={Profile} alt="Profile" />
 							<img className="img-city" src={City} alt="City" />
