@@ -1,179 +1,198 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Container } from "react-bootstrap";
-import styled from "styled-components";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdMail } from "react-icons/md";
-import City from "../assets/raman.jpg";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid2";
+import City from "../assets/wpg.webp";
 import Profile from "../assets/raman.jpg";
+import Styles from "../styles/homeStyle";
+import { Link } from "react-router-dom";
+import Typography from "@mui/material/Typography";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailIcon from "@mui/icons-material/Mail";
+import { Link as LinkMUI } from "@mui/material";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
+import LaptopMacSharpIcon from "@mui/icons-material/LaptopMacSharp";
 
-const StyledRow = styled(Row)`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: white;
-`;
-const StyledCol = styled(Col)`
-	display: flex;
-	align-items: center;
-	text-align: left;
-`;
-const Title = styled(Row)`
-	font-size: 20px;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	padding-left: 0;
-	margin: 0;
-`;
+const { ImageContainer } = Styles;
 
-const Introduction = styled(Row)`
-	padding-left: 5%;
-`;
-
-const P1 = styled.p`
-	padding: 0;
-	margin: 0;
-	font-size: 12px;
-`;
-
-const P2 = styled.p`
-	padding: 0;
-	margin: 0;
-	font-size: 12px;
-	padding-left: 15px;
-`;
-
-const SocialLinks = styled(Row)`
-	padding-top: 30px;
-	padding-bottom: 30px;
-	display: flex;
-	gap: 8px; /* Space between icons */
-`;
-
-const Icon = styled.div`
-	color: black;
-	font-size: 20px;
-	transition: color 0.3s ease;
-
-	&:hover {
-		color: gray;
-	}
-`;
-
-const NavLink = styled.a`
-	margin-top: 160px;
-	padding: 0;
-	text-decoration: none;
-	color: black;
-
-	&:hover {
-		opacity: 70%;
-	}
-`;
-
-const Nav = styled.p`
-	margin-top: 10px;
-	padding: 0;
-	text-align: left;
-	font-size: 15px;
-	color: rgb(112, 112, 112);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-`;
-
-const ImageContainer = styled.div`
-	display: flex;
-	gap: 20px;
-	padding-top: 20px;
-
-	img {
-		width: 150px;
-		height: 150px;
-		border-radius: 50%;
-		border: 1px solid #fff;
-		box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-	}
-
-	.img-city {
-		width: 100px;
-		height: 100px;
-		margin-top: 60px;
-	}
-
-	.img-profile {
-		height: 150px;
-	}
-`;
-
-export default class Home extends Component {
-	render() {
-		return (
-			<Container fluid>
-				<StyledRow>
-					<Nav>
+export default function Home() {
+	return (
+		<Box sx={{ width: "100%" }}>
+			<Grid
+				container
+				direction="column"
+				alignItems="center"
+				justifyContent="center">
+				<Grid item paddingBottom={10} size={{ xs: 10, md: 5 }}>
+					<Grid container direction="row">
 						<ImageContainer>
 							<img className="img-profile" src={Profile} alt="Profile" />
 							<img className="img-city" src={City} alt="City" />
 						</ImageContainer>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<NavLink
+					</Grid>
+					<Grid item display={"flex"} justifyContent={"right"} paddingTop={2}>
+						<LinkMUI
 							href="/resume.pdf"
 							target="_blank"
-							rel="noopener noreferrer">
-							resume
-						</NavLink>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<NavLink as={Link} to="/projects">
-							projects
-						</NavLink>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					</Nav>
-				</StyledRow>
-				<StyledRow>
-					<StyledCol md={5}>
-						<Row>
-							<SocialLinks>
-								<a
-									href="https://github.com/ramanbhandari"
-									target="_blank"
-									rel="noopener noreferrer">
-									<Icon as={FaGithub} />
-								</a>
-								<a
-									href="https://www.linkedin.com/in/raman-bhandari/"
-									target="_blank"
-									rel="noopener noreferrer">
-									<Icon as={FaLinkedin} />
-								</a>
-								<a
-									href="mailto:bhandar1@myumanitoba.ca"
-									target="_blank"
-									rel="noopener noreferrer">
-									<Icon as={MdMail} />
-								</a>
-							</SocialLinks>
-							<Title>Hi, I'm Raman</Title>
-							<Introduction>
-								<P1>
-									<span>excited for</span> longer days, new homes in tech, large
-									windows and tall buildings
-								</P1>
-								<P2>
-									<span>aspiring to</span> diversify my media intake, spend time
-									intentionally, go to more museums
-								</P2>
-								<P1>
-									<span>inspired by</span> big cities, thoughtful writing,
-									people that love what they do
-								</P1>
-							</Introduction>
-						</Row>
-					</StyledCol>
-				</StyledRow>
-			</Container>
-		);
-	}
+							rel="noopener noreferrer"
+							underline="none">
+							<Typography variant="caption" fontSize={12} color="black">
+								#resume
+							</Typography>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</LinkMUI>
+						<Link to="/projects" style={{ textDecoration: "none" }}>
+							<Typography variant="caption" fontSize={12} color="black">
+								#projects
+							</Typography>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						</Link>
+					</Grid>
+
+					<Grid item paddingTop={2} paddingBottom={1}>
+						<Typography variant="h6" gutterBottom>
+							Hi, I'm Raman
+						</Typography>
+					</Grid>
+
+					<Grid item paddingLeft={"5%"}>
+						<Typography variant="caption" fontSize={11} gutterBottom>
+							excited to blend creativity with technology, exploring
+							cutting-edge innovations in bustling cities.
+						</Typography>
+					</Grid>
+					<Grid item paddingLeft={"7%"}>
+						<Typography variant="caption" fontSize={11} gutterBottom>
+							aspiring to dive in diverse challenges,
+							meaningful connections, and exploring new interests.
+						</Typography>
+					</Grid>
+					<Grid item paddingLeft={"5%"}>
+						<Typography variant="caption" fontSize={11} gutterBottom>
+							inspired by innovative spaces, impactful projects, and people who
+							push boundaries in their work.
+						</Typography>
+					</Grid>
+					<Grid item paddingTop={3} paddingBottom={3}>
+						<LinkMUI
+							href="https://github.com/ramanbhandari"
+							target="_blank"
+							rel="noopener noreferrer"
+							style={{ marginRight: "8px" }}>
+							<GitHubIcon
+								fontSize="small"
+								style={{ color: "black", opacity: "65%" }}
+							/>
+						</LinkMUI>
+						<LinkMUI
+							href="https://www.linkedin.com/in/raman-bhandari/"
+							target="_blank"
+							rel="noopener noreferrer"
+							style={{ marginRight: "8px" }}>
+							<LinkedInIcon
+								fontSize="small"
+								style={{ color: "black", opacity: "65%" }}
+							/>
+						</LinkMUI>
+						<LinkMUI
+							href="mailto:bhandar1@myumanitoba.ca"
+							target="_blank"
+							rel="noopener noreferrer"
+							style={{ marginRight: "8px" }}>
+							<MailIcon
+								fontSize="small"
+								style={{ color: "black", opacity: "65%" }}
+							/>
+						</LinkMUI>
+					</Grid>
+
+					<Grid item>
+						<Typography variant="caption" fontSize={12} gutterBottom>
+							I'm studying Computer Science at the University of Manitoba with a
+							minor in Mathematics
+							<br />
+							<br />
+							recently, I...
+						</Typography>
+
+						<List>
+							<ListItem>
+								<ListItemIcon>
+									<LaptopMacSharpIcon fontSize="small" />
+								</ListItemIcon>
+								<ListItemText disableTypography>
+									<Typography variant="caption" fontSize={12}>
+										am working at G3 Canada in Winnipeg - excited to learn and
+										contribute with love (and some intelligence?)!
+									</Typography>
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<RadioButtonCheckedIcon fontSize="small" />
+								</ListItemIcon>
+								<ListItemText disableTypography>
+									<Typography variant="caption" fontSize={12}>
+										spent a summer and winter working in Priceline on the API
+										Team, discovering some pretty interesting work in the Online
+										Travel Agency, let's talk about it(?)
+									</Typography>
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<RadioButtonCheckedIcon fontSize="small" />
+								</ListItemIcon>
+								<ListItemText disableTypography>
+									<Typography variant="caption" fontSize={12}>
+										recently dived into cloud computing and microservices
+										architecture, experimenting with deploying scalable
+										applications on Azure. (it's coool!)
+									</Typography>
+								</ListItemText>
+							</ListItem>
+							<ListItem>
+								<ListItemIcon>
+									<RadioButtonCheckedIcon fontSize="small" />
+								</ListItemIcon>
+								<ListItemText disableTypography>
+									<Typography variant="caption" fontSize={12}>
+										spent an incredible year as President of .devClub, organized
+										events and hackathon. I lead the largest Hackathon in
+										Manitoba "smoothly" (well, maybe with a few hiccups)
+									</Typography>
+								</ListItemText>
+							</ListItem>
+						</List>
+						<Typography variant="caption" fontSize={12} gutterBottom>
+							and in other moments...
+						</Typography>
+						<List>
+							<ListItem>
+								<Typography variant="body2" fontSize={12}>
+									finding comfort and challenge in overthinking skills (it is a
+									talent)
+								</Typography>
+							</ListItem>
+							<ListItem>
+								<Typography variant="body2" fontSize={12}>
+									trying out my hand at new skills like photography and design
+								</Typography>
+							</ListItem>
+							<ListItem>
+								<Typography variant="body2" fontSize={12}>
+									engaging with campus life again as I stretch my last year in
+									university
+								</Typography>
+							</ListItem>
+						</List>
+					</Grid>
+				</Grid>
+			</Grid>
+		</Box>
+	);
 }
