@@ -32,7 +32,7 @@ const ImageContainer = styled(Grid)`
 	.img-city {
 		width: 100px;
 		height: 100px;
-		margin-top: 70px;
+		margin-top: 60px;
 
 		@media (max-width: 900px) {
 			height: 60px !important;

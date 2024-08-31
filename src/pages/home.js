@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
-import City from "../assets/wpg.webp";
+import City from "../assets/wpg.png";
 import Profile from "../assets/raman.jpg";
 import Styles from "../styles/homeStyle";
 import { Link } from "react-router-dom";
