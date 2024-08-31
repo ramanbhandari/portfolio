@@ -10,9 +10,7 @@ jobs:
     steps:
     - name: Checkout Portfolio Repository
       uses: actions/checkout@v3
-      with:
-        repository: ramanbhandari/portfolio
-        personal_token: ${{ secrets.PAT_TOKEN }}
+        
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
@@ -29,6 +27,7 @@ jobs:
         external_repository: ramanbhandari/ramanbhandari.github.io
         publish_dir: ./build
         publish_branch: main
+        personal_token: ${{ secrets.PAT_TOKEN }}
         user_name: 'GitHub Actions'
         user_email: 'actions@github.com'
         deploy_key: ${{ secrets.DEPLOY_KEY}}
