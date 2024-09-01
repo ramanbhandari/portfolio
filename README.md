@@ -1,28 +1,62 @@
-# Getting Started with Create React App
+# Raman Bhandari's Portfolio (hey!)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+- **About Me**: Learn more about my background, skills, and experiences.
+- **Projects**: A collection of my work, including descriptions, technologies used, and links to the live demos or repositories.
+- **Contact**: A simple way to get in touch with me through social media or email.
+- **Responsive Design**: Fully responsive, works on all devices.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- **Frontend**: JavaScript, React, HTML, CSS, Material-UI
+- **Deployment**: Github Actions, GitHub Pages
+- **Version Control**: Git
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Setup & Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+If you want to run this project locally, follow these steps:
 
-### `npm test`
+1. **Clone the repository**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    ```bash
+    git clone https://github.com/ramanbhandari/portfolio.git
+    cd portfolio
+    ```
 
-### `npm run build`
+2. **Install dependencies**:
+   Ensure you have [Node.js](https://nodejs.org/) installed, then run:
+    ```bash
+    npm install
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Run the project**:
+    ```bash
+    npm start
+    ```
+    This will start the development server. Open your browser and visit http://localhost:3000 to view the website.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Build for Production**:
+   If you want to create a production-ready build, use:
+    ```bash
+    npm run build
+    ```
+    The production build will be generated in the build/ directory.
+
+## Deployment
+
+This project is deployed using GitHub Pages. You can view the live site here: [ramanbhandari.github.io](https://ramanbhandari.github.io).
+
+### Deployment Instructions
+
+To deploy the latest version of your portfolio:
+
+1. Ensure your code is up to date and all changes are committed.
+2. Create a pull request and merge the changes to the `main` branch.
+3. Trigger the GitHub Actions workflow to deploy the latest build to GitHub Pages on another repository [/ramanbhandari/ramanbhandari.github.io](https://github.com/ramanbhandari/ramanbhandari.github.io).
+
+  This portfolio is deployed to external repository using [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages?tab=readme-ov-file#%EF%B8%8F-deploy-to-external-repository-external_repository). Check it out!
+
+
+Feel free to reach out to me at [ramanbhandari](mailto:ramanbhandarieoes@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/raman-bhandari).
+
