@@ -30,6 +30,9 @@ function Projects() {
 						body={project.description}
 						techs={project.techs}
 						link={project.link}
+						multipleRepoLink={project.multipleRepoLink}
+						repoNameBackend={project.repoNameBackend}
+						repoNameFrontend={project.repoNameFrontend}
 						projImage={project.projImage}></Card>
 				))}
 			</Grid>
