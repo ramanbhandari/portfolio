@@ -5,7 +5,16 @@ import Typography from "@mui/material/Typography";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { Link as LinkMUI } from "@mui/material";
 
-function Card({ heading, body, techs, link, projImage }) {
+function Card({
+	heading,
+	body,
+	techs,
+	link,
+	projImage,
+	multipleRepoLink = null,
+	repoNameFrontend = null,
+	repoNameBackend = null,
+}) {
 	return (
 		<Box sx={{ flexGrow: 1 }}>
 			<Grid
@@ -27,28 +36,79 @@ function Card({ heading, body, techs, link, projImage }) {
 						<Typography
 							variant="h6"
 							gutterBottom
-                            fontFamily={'Roboto'}
+							fontFamily={"Roboto"}
 							fontSize={{ xs: 15, sm: 13, md: 15 }}
-                            textAlign={{xs: 'center', sm: 'center', md: 'left'}}>
+							textAlign={{ xs: "center", sm: "center", md: "left" }}>
 							{heading}{" "}
-							<LinkMUI
-								href={link}
-								target="_blank"
-								rel="noopener noreferrer"
-								style={{ marginRight: "8px" }}>
-								<GitHubIcon
-									fontSize="small"
-									style={{ color: "black", opacity: "65%" }}
-								/>
-							</LinkMUI>
+							{multipleRepoLink === null && (
+								<LinkMUI
+									href={link}
+									target="_blank"
+									rel="noopener noreferrer"
+									style={{ marginRight: "8px" }}>
+									<GitHubIcon
+										fontSize="small"
+										style={{ color: "black", opacity: "65%" }}
+									/>
+								</LinkMUI>
+							)}
 						</Typography>
 					</Grid>
-					<Grid item paddingBottom={1} textAlign={"left"}>
+					{repoNameBackend !== null &&
+						repoNameFrontend !== null &&
+						multipleRepoLink !== null && (
+							<Grid
+								item
+								paddingBottom={1}
+								textAlign={{ xs: "center", sm: "center", md: "left" }}>
+								<Typography
+									variant="caption"
+									gutterBottom
+									fontSize={{ xs: 13, sm: 11, md: 12 }}
+									fontWeight={"medium"}
+									fontStyle={"revert-layer"}
+									textAlign={{ xs: "center", sm: "center", md: "left" }}>
+									{repoNameBackend}{" "}
+									<LinkMUI
+										href={link}
+										target="_blank"
+										rel="noopener noreferrer"
+										style={{ marginRight: "8px" }}>
+										<GitHubIcon
+											fontSize="small"
+											style={{ color: "black", opacity: "65%" }}
+										/>
+									</LinkMUI>
+								</Typography>
+								<Typography
+									variant="caption"
+									gutterBottom
+									fontSize={{ xs: 13, sm: 11, md: 12 }}
+									fontWeight={"medium"}
+									fontStyle={"revert-layer"}
+									textAlign={{ xs: "center", sm: "center", md: "left" }}>
+									{repoNameFrontend}{" "}
+									<LinkMUI
+										href={multipleRepoLink}
+										target="_blank"
+										rel="noopener noreferrer">
+										<GitHubIcon
+											fontSize="small"
+											style={{ color: "darkred", opacity: "80%" }}
+										/>
+									</LinkMUI>
+								</Typography>
+							</Grid>
+						)}
+					<Grid
+						item
+						paddingBottom={1}
+						textAlign={{ xs: "center", sm: "center", md: "left" }}>
 						<Typography
 							variant="caption"
 							gutterBottom
 							fontSize={{ xs: 10, sm: 9, md: 10 }}
-                            textAlign={{xs: 'center', sm: 'center', md: 'left'}}>
+							textAlign={{ xs: "center", sm: "center", md: "left" }}>
 							{techs}
 						</Typography>
 					</Grid>
@@ -57,7 +117,7 @@ function Card({ heading, body, techs, link, projImage }) {
 							variant="body2"
 							gutterBottom
 							fontSize={{ xs: 12, sm: 10, md: 11 }}
-                            textAlign={{xs: 'center', sm: 'center', md: 'left'}}>
+							textAlign={{ xs: "center", sm: "center", md: "left" }}>
 							{body}
 						</Typography>
 					</Grid>
