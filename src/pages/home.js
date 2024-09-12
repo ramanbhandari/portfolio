@@ -38,14 +38,13 @@ export default function Home() {
 						<LinkMUI
 							href="/resume.pdf"
 							target="_blank"
-							rel="noopener noreferrer"
-							underline="none">
+							rel="noopener noreferrer">
 							<Typography variant="caption" fontSize={12} color="black">
 								#resume
 							</Typography>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 						</LinkMUI>
-						<Link to="/projects" style={{ textDecoration: "none" }}>
+						<Link to="/projects">
 							<Typography variant="caption" fontSize={12} color="black">
 								#projects
 							</Typography>
