@@ -2,7 +2,7 @@ import eezy from "../assets/eezy.png";
 import hci from "../assets/hci.png";
 import payoffPal from "../assets/payoffPal.png";
 import rustySoundFlow from "../assets/rusty-flow.gif";
-
+import chatServer from "../assets/chat-server.gif";
 const ProjectsList = [
 	{
 		title: "PayoffPal (September 2024 - present)",
@@ -22,6 +22,14 @@ const ProjectsList = [
 		link: "https://github.com/ramanbhandari/rusty-sound-flow",
 		techs: "Rust, WGPU, Rodio, RustFFT, Clap",
 		projImage: rustySoundFlow,
+	},
+	{
+		title: "Discordn't Chat Server: Single-Threaded Performance Analysis",
+		description:
+			"Developed Discordn't, a single-threaded chat server capable of handling multiple clients using non-blocking sockets and select calls. Conducted an extensive performance analysis by simulating multiple clients sending and receiving messages in real-time. Evaluated server scalability and throughput across varying client loads, with boxplot visualizations revealing how message throughput (sent and received) changes as client numbers increase.",
+		link: "https://github.com/ramanbhandari/comp3010-a1",
+		techs: "Python, Sockets, Non-blocking I/O, Pandas, Matplotlib",
+		projImage: chatServer,
 	},
 	{
 		title: "Eezy: Personal Manager",
