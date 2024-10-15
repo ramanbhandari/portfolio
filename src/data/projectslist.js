@@ -27,7 +27,7 @@ const ProjectsList = [
 		title: "Discordn't Chat Server: Single-Threaded Performance Analysis",
 		description:
 			"Developed Discordn't, a single-threaded chat server capable of handling multiple clients using non-blocking sockets and select calls. Conducted an extensive performance analysis by simulating multiple clients sending and receiving messages in real-time. Evaluated server scalability and throughput across varying client loads, with boxplot visualizations revealing how message throughput (sent and received) changes as client numbers increase.",
-		link: "https://github.com/ramanbhandari/comp3010-a1",
+		link: "https://github.com/ramanbhandari/Discordn-t",
 		techs: "Python, Sockets, Non-blocking I/O, Pandas, Matplotlib",
 		projImage: chatServer,
 	},
