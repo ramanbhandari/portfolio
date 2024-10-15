@@ -1,6 +1,8 @@
 import eezy from "../assets/eezy.png";
 import hci from "../assets/hci.png";
 import payoffPal from "../assets/payoffPal.png";
+import rustySoundFlow from "../assets/rusty-flow.gif";
+
 const ProjectsList = [
 	{
 		title: "PayoffPal (September 2024 - present)",
@@ -12,6 +14,14 @@ const ProjectsList = [
 		repoNameFrontend: "Payoffpal-ui",
 		techs: "Ruby on Rails, PostgreSQL, Expo, React Native, Axios",
 		projImage: payoffPal,
+	},
+	{
+		title: "Rusty Sound Flow",
+		description:
+			"Built Rusty Sound Flow, a real-time audio visualization tool that supports both microphone input and audio file input. The application processes audio data and visualizes it using frequency spectrums and waveforms. It is optimized for performance, ensuring low-latency audio processing with real-time feedback.",
+		link: "https://github.com/ramanbhandari/rusty-sound-flow",
+		techs: "Rust, WGPU, Rodio, RustFFT, Clap",
+		projImage: rustySoundFlow,
 	},
 	{
 		title: "Eezy: Personal Manager",
