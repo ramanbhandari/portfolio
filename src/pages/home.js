@@ -36,7 +36,7 @@ export default function Home() {
 					</Grid>
 					<Grid item display={"flex"} justifyContent={"right"} paddingTop={2}>
 						<LinkMUI
-							href="/Raman_Bhandari_resume.pdf"
+							href="/resume.pdf"
 							target="_blank"
 							rel="noopener noreferrer"
 							underline="none">
